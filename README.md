@@ -96,13 +96,11 @@
 
 ---
 
-### 📊 GitHub Stats
+📊 GitHub Stats
 
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=shiwali-saraswat-dev&show_icons=true&theme=tokyonight&hide_border=true" alt="Shiwali's GitHub Stats" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shiwali-saraswat-dev&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165" />
-
+  <img src="https://github-stats-extended.vercel.app/api?username=shiwali-saraswat-dev&show_icons=true&theme=tokyonight&hide_border=true" alt="Shiwali's GitHub Stats" height="165" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=shiwali-saraswat-dev&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165" />
 </div>
 
 ---
