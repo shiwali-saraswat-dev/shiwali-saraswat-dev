@@ -69,16 +69,17 @@ Most of my professional work lives in private repositories, so GitHub can't show
 
 #### [Library Management API](https://github.com/shiwali-saraswat-dev/library-management-api) · 🚧 In progress
 
-*A RESTful Laravel 12 API for a library's catalog, members, borrowing workflow, reservations, and fines.*
+*A RESTful Laravel 12 API for a library's catalog, members, and borrowing workflow.*
 
-- **Built:** Auth, Category, Author, and Book modules
-- **Architecture:** Controller → Service → Repository → Policy → Resource layering, with centralized error handling
+- **Built:** Auth, Category, Author, Book, and Member modules — all with role-based access control
+- **Architecture:** Controller → Service → Repository → Policy → Resource layering, with centralized error handling and request tracing (`X-Request-Id` on every response)
 - **Security:** Sanctum authentication and a four-tier RBAC hierarchy (owner → admin → librarian → member) via spatie/laravel-permission
-- **API design:** cursor pagination, role-aware HATEOAS links, OpenAPI docs via l5-swagger
-- **In progress:** Member module
-- **Roadmap:** borrowing, reservations, fines, concurrency-safe transactions, idempotent writes
+- **API design:** cursor pagination, role-aware HATEOAS links, consistent success/error envelopes, OpenAPI docs via l5-swagger (Auth, Books, Categories, and Authors documented; Members in progress)
+- **Quality:** Pest test suite, Larastan static analysis, and a GitHub Actions CI pipeline running both checks on every push
+- **In progress:** borrow/return workflow with concurrency-safe transactions
+- **Roadmap:** reservations, fines, idempotent writes
 
-`PHP 8.3` `Laravel 12` `MySQL` `Sanctum` `OpenAPI`
+`PHP 8.3` `Laravel 12` `MySQL` `Sanctum` `OpenAPI` `Pest` `GitHub Actions`
 
 #### [Unified Hotel ERP](https://github.com/shiwali-saraswat-dev/Unified-Hotel-ERP)
 
@@ -92,14 +93,15 @@ Most of my professional work lives in private repositories, so GitHub can't show
 
 `Laravel 12` `Blade` `MySQL` `Tailwind CSS`
 
-#### [Food Delivery App (React)](https://github.com/shiwali-saraswat-dev/food-delivery-app-react) · 🆕
+#### [Food Delivery App (React)](https://github.com/shiwali-saraswat-dev/food-delivery-app-react)
 
-*Applying React fundamentals to a real-world ordering flow: restaurant listing, menus, and routing.*
+*A food-ordering UI practice project, built and refactored publicly through a feature-branch + pull-request workflow.*
 
-<!-- Add the live demo link here once it is deployed:
-🔗 [Live demo](https://shiwali-saraswat-dev.github.io/food-delivery-app-react/) -->
+- **Built:** header/nav, tabs, category and brand cards, promotional banner, restaurant listing with ratings/cuisine/delivery time, chain carousel, and footer — fully componentized from an original single-file prototype
+- **Process:** every change ships through its own branch and PR; some (e.g. `explore/props-patterns`) deliberately compare a few implementation approaches in the PR description before settling on one
+- **Next:** search, cart, checkout, and order tracking
 
-`React` `React Router` `JavaScript` `Parcel`
+`React` `Parcel` `JavaScript`
 
 #### [DSA in PHP](https://github.com/shiwali-saraswat-dev/dsa_php)
 
@@ -109,15 +111,18 @@ Most of my professional work lives in private repositories, so GitHub can't show
 
 #### [React From Scratch](https://github.com/shiwali-saraswat-dev/react-from-scratch)
 
-*A self-paced React learning log, from plain HTML and vanilla JS through JSX, functional components, and composition.*
+*A self-paced React learning log, numbered module by module: plain HTML and vanilla JS through JSX, components, hooks, data fetching, and routing.*
 
-`React` `Vite` `Parcel` `JavaScript`
+- **Covers so far:** functional components and composition, props patterns, JS expressions in JSX, the `useState` hook, fetching data with a loading UI, a search/toggle UI, and React Router
+- **Format:** each concept lives in its own numbered folder (`001-hello-world-html` → `023-react-routing`), so progress is traceable step by step
+
+`React` `Vite` `React Router` `JavaScript`
 
 ---
 
 ### 🌱 What I'm Working On
 
-- Finishing the Member module and borrowing workflow in the Library Management API
+- Building the borrow/return workflow in the Library Management API
 - Building out React skills through small, real-world projects
 - Practicing data structures and algorithms in PHP
 
